@@ -12,7 +12,54 @@ import java.util.ArrayList;
  *
  * @author reroes
  */
-public class ReportePolicia extends Reporte{
+public class ReportePolicia extends Reporte {
+
     double promedioEdades;
     ArrayList<Policia> lista;
+
+    public double obtenerPromedioEdades() {
+        return promedioEdades;
+    }
+
+    public void establecerPromedioEdades() {
+        double suma = 0;
+
+        for (int i = 0; i < lista.size(); i++) {
+
+            suma = suma + lista.get(i).getEdad();
+        }
+        promedioEdades = suma / lista.size();
+
+    }
+
+    public ArrayList<Policia> getLista() {
+        return lista;
+    }
+
+    public void establecer(ArrayList<Policia> l) {
+        lista = l;
+    }
+
+    @Override
+    public String toString() {
+
+        String cadena = "";
+        for (int i = 0; i < lista.size(); i++) {
+            cadena = String.format("%sNombre: %s\n"
+                    + "Apellidos: %s\n"
+                    + "Edad %s\n"
+                    + "edad: %s\n",
+                    cadena,
+                    lista.get(i).getNombre(),
+                    lista.get(i).getApellido(),
+                    lista.get(i).getEdad(),
+                    lista.get(i).getEdad());
+
+        }
+        cadena = String.format("%s\nEL total de edades %.2f\n",
+                cadena, obtenerPromedioEdades());
+        return cadena;
+
+    }
+
 }

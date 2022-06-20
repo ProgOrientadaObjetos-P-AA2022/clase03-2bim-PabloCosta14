@@ -2,4 +2,4 @@
 Trabajo En Grupo:
 --David Carrion
 --Pablo Costa
---Pepe Guerrero
+--Jose Guerrero

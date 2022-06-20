@@ -23,18 +23,14 @@ public class Principal {
         Docente doc2 = new Docente("Luis", "Alvarez", 38, 1000);
         listaDocentes.add(doc1);
         listaDocentes.add(doc2);
-        
 
         ArrayList<Estudiante> listaEstudiantes = new ArrayList<>();
-        // agregar elementos
         Estudiante est1 = new Estudiante("René", "Elizalde", 33, 100.2);
         Estudiante est2 = new Estudiante("Patricia", "Velez", 31, 100.2);
         listaEstudiantes.add(est1);
         listaEstudiantes.add(est2);
 
         ArrayList<Policia> listaPolicias = new ArrayList<>();
-        // agregar elementos
-
         Policia pol1 = new Policia("María", "MENDOZA", 35, "Cabo");
         Policia pol2 = new Policia("ALEX", "Medina", 33, "Cabo");
         listaPolicias.add(pol1);
@@ -43,17 +39,22 @@ public class Principal {
         ReporteDocente rd = new ReporteDocente("0001Doc");
         rd.establecerLista(listaDocentes);
         rd.establecerPromedioSueldos();
-        
-        ReporteEstudiante re = new ReporteEstudiante("0001Est");
-           re.establecerLista(listaEstudiantes);
-           re.establecerPromedioMatriculas();
-        //ReportePolicia rp = new ReportePolicia("0001Pol");
 
+        ReporteEstudiante re = new ReporteEstudiante("0001Est");
+        re.establecerLista(listaEstudiantes);
+        re.establecerPromedioMatriculas();
+
+        ReportePolicia rp = new ReportePolicia("0001Pol");
+        rp.establecer(listaPolicias);
+        rp.establecerPromedioEdades();
+
+        System.out.println("--------------------------------------------");
         System.out.println(rd);
         System.out.println("--------------------------------------------");
         System.out.println(re);
-         System.out.println("--------------------------------------------");
-       // System.out.println(rp);
+        System.out.println("--------------------------------------------");
+        System.out.println(rp);
+        System.out.println("--------------------------------------------");
 
     }
 }

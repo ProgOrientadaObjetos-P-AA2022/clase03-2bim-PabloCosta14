@@ -15,9 +15,10 @@ public class Reporte {
 
     public Reporte(String cod) {
         codigo = cod;
- 
+
     }
-      public void setCodigo(String cod) {
+
+    public void setCodigo(String cod) {
         codigo = cod;
     }
 
@@ -25,5 +26,4 @@ public class Reporte {
         return codigo;
     }
 
-    
 }

@@ -1,4 +1,4 @@
-/*
+    /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -21,7 +21,10 @@ public abstract class Docente {
         return nombre;
     }
     
-    public abstract void obtenerSueldo(double d){
+   /* public abstract void obtenerSueldo(double d){
         sueldo = d;
-    }
+    }*/
+    
+    public abstract void obtenerSueldo(double d);
 }
+    
